@@ -1,0 +1,19 @@
+{
+  "name": "xyz_automated_testing",
+  "version": "1.0.0",
+  "description": "Automated testing framework for the xyz application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Eric Parker",
+  "license": "ISC",
+  "devDependencies": {
+    "@nightwatch/apitesting": "^3.0.1",
+    "@types/nightwatch": "^2.3.24",
+    "nightwatch": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}
