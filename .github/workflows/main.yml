@@ -23,7 +23,7 @@ jobs:
       - name: Execute Tests
         run: |
           npm install
-          TEST_URL=${{ secrets.APP_URL }} npx nightwatch ./test/xyz_tests.ts --env api_testing
+          TEST_URL=${{ secrets.APP_URL }} npx nightwatch ./test/xyz_tests.js --env api_testing
   
       - name: Archive test results
         uses: actions/upload-artifact@v3
