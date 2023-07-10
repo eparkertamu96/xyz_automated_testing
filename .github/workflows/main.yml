@@ -7,13 +7,6 @@ on:
     branches: [ "main" ]
 
 jobs:
-
-  build:
-
-    runs-on: ubuntu-latest
-    permissions:
-      packages: write
-
   test:
     runs-on: ubuntu-latest
     steps:
@@ -30,8 +23,7 @@ jobs:
       - name: Execute Tests
         run: |
           npm install
-          ls -la
-          TEST_URL=${{ secrets.APP_URL }} npx nightwatch ./test/xyz_test.ts --config ./nightwatch.conf.js --env api_testing
+          TEST_URL=${{ secrets.APP_URL }} npx nightwatch ./test/xyz_test.ts --env api_testing
   
       - name: Archive test results
         uses: actions/upload-artifact@v3
