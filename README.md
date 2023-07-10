@@ -23,6 +23,6 @@ In order to execute the XYZ automated tests, follow the steps below.
 ```TEST_URL=<loadbalancerURL>```
 
 4) Execute the tests with this command.
-```TES_URL=<loadbalanerURL> npx nightwatch ./test/xyz_tests.ts --env api_testing```
+```TEST_URL=<loadbalanerURL> npx nightwatch ./test/xyz_tests.ts --env api_testing```
 
 5) The output is stored in the tests_output folder.

@@ -1,12 +1,12 @@
 import { NightwatchBrowser, NightwatchTests } from "nightwatch";
 import '@nightwatch/apitesting';
 
-const xyzTests: NightwatchTests = {
-    
+const xyzTests: NightwatchTests = {  
+
     'can GET message': async ({ supertest }: NightwatchBrowser) => {
       await supertest
         // Request can take a a baseUrl for a remote API or the entry point of a REST API, like Express()
-        .request(`http://${process.env.TEST_URL}`)
+        .request("https://winxyz.net")
         // After request, the syntax exactly matches supertest and chai
         .get('/')
         .expect(200)
