@@ -2,7 +2,8 @@
   "name": "xyz_automated_testing",
   "version": "1.0.0",
   "description": "Automated testing framework for the xyz application.",
-  "main": "index.js",
+  "type": "module",
+  "main": "test/xyz_test.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
