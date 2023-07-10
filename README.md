@@ -20,9 +20,9 @@ In order to execute the XYZ automated tests, follow the steps below.
 ```npm install```
 
 3) Set the environment variable with the appropriate load balancer URL. NOTE, this can be done as part of the command itself.
-```TEST_URL=<loadbalancerURL>```
+```TEST_URL=<URL>```
 
 4) Execute the tests with this command.
-```TEST_URL=<loadbalanerURL> npx nightwatch ./test/xyz_tests.ts --env api_testing```
+```TEST_URL=<URL> npx nightwatch ./test/xyz_tests.js --env api_testing```
 
 5) The output is stored in the tests_output folder.
