@@ -1,0 +1,40 @@
+name: XYZ Testing
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: eparkertamu96/xyz_automated_testing
+
+      - name: Setup project
+        run: |
+          sudo apt-get update
+          sudo apt install nodejs
+          
+      - name: Execute Tests
+        run: |
+          npm install
+          ls -la
+          TEST_URL=${{ secrets.APP_URL }} npx nightwatch ./test/xyz_test.ts --config ./nightwatch.conf.js --env api_testing
+  
+      - name: Archive test results
+        uses: actions/upload-artifact@v3
+        with:
+          name: code-coverage-report
+          path: tests_output
